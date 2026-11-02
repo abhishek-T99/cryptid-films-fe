@@ -1,0 +1,57 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.app__title {
+  margin: 0;
+  font-size: clamp(2.25rem, 8vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.app__tagline {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.app__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background-color: var(--color-surface);
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+.app__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.app__status--checking .app__dot {
+  background-color: var(--color-muted);
+}
+
+.app__status--connected {
+  color: var(--color-ok);
+}
+
+.app__status--degraded {
+  color: var(--color-warn);
+}
+
+.app__status--unreachable {
+  color: var(--color-error);
+}
